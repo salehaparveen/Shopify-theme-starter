@@ -1,0 +1,34 @@
+{
+  "name": "shopify-theme-starter",
+  "version": "1.0.0",
+  "description": "A boiler plate for getting started with building a Shopify theme from scratch",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run dev\" \"npm run theme-watch\"",
+    "dev": "webpack --progress --color --watch",
+    "build": "NODE_ENV=production webpack",
+    "theme-watch": "theme watch --allow-live",
+    "deploy": "theme deploy --allow-live && theme publish --allow-live"
+  },
+  "keywords": [],
+  "author": "Leo Huynh @ https://leohuynh.dev",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "autoprefixer": "^10.0.1",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.3.0",
+    "css-loader": "^5.0.0",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^1.1.2",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "postcss-loader": "^4.1.0",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
+    "tailwindcss": "^2.0.1",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
